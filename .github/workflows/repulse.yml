@@ -92,6 +92,11 @@ jobs:
           echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV
           echo "OWNER=${{ secrets.OWNER }}" >> $GITHUB_ENV
           echo "REPO=${{ secrets.REPO }}" >> $GITHUB_ENV
+          echo "DARK_MODE=true" >> $GITHUB_ENV
+
+      - name: Ensure Graphs Directory Exists
+        run: |
+          mkdir -p assets/graphs
 
       - name: Run Repulse Analytics
         run: go run cmd/repulse/main.go
