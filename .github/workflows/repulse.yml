@@ -57,13 +57,19 @@ jobs:
             echo "No previous github_traffic_db artifact found in past runs. Attempting to download default backup..."
           fi
 
-          RELEASE_URL="https://github.com/Zweih/repulse-analytics/releases/download/test/github_traffic.db"
-          curl -L -o data/github_traffic.db -H "Authorization: token $GITHUB_TOKEN" "$RELEASE_URL"
-          
+          gh release download test --repo "${{ github.repository }}" --pattern "github_traffic.db" --dir data
+
           if [[ -f "data/github_traffic.db" ]]; then
-            echo "Successfully downloaded default database from release."
+            FILE_TYPE=$(file data/github_traffic.db)
+            if [[ ! "$FILE_TYPE" =~ "SQLite" ]]; then
+              echo "Downloaded file is not a valid SQLite database. Deleting and starting fresh."
+              rm data/github_traffic.db
+            else
+              echo "Successfully downloaded default database from release."
+              exit 0
+            fi
           else
-            echo "Failed to download default database. Proceeding with an empty database."
+            echo "Failed to download default database. Creating a new one."
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
