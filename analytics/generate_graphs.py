@@ -122,25 +122,27 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
     print(f"Graph saved as {filepath}")
 
 
-save_graph(
-    df["timestamp"],
-    df["clones"],
-    f"{REPO_NAME} Daily Clones Over Time",
-    "Number of Clones",
-    "daily_clones.png",
-    marker="o",
-    color="cyan" if DARK_MODE else "blue",
-)
+# uncomment to generate daily clone graph
+# save_graph(
+#     df["timestamp"],
+#     df["clones"],
+#     f"{REPO_NAME} Daily Clones Over Time",
+#     "Number of Clones",
+#     "daily_clones.png",
+#     marker="o",
+#     color="cyan" if DARK_MODE else "blue",
+# )
 
-save_graph(
-    df["timestamp"],
-    df["views"],
-    f"{REPO_NAME} Daily Views Over Time",
-    "Number of Views",
-    "daily_views.png",
-    marker="s",
-    color="lime" if DARK_MODE else "green",
-)
+# uncomment to generate daily view graph
+# save_graph(
+#     df["timestamp"],
+#     df["views"],
+#     f"{REPO_NAME} Daily Views Over Time",
+#     "Number of Views",
+#     "daily_views.png",
+#     marker="s",
+#     color="lime" if DARK_MODE else "green",
+# )
 
 df["total_clones"] = df["clones"].cumsum()
 save_graph(
@@ -153,16 +155,17 @@ save_graph(
     color="cyan" if DARK_MODE else "blue",
 )
 
-df["total_views"] = df["views"].cumsum()
-save_graph(
-    df["timestamp"],
-    df["total_views"],
-    f"Total {REPO_NAME} Views Over Time",
-    "Total Views",
-    "total_views.png",
-    marker="s",
-    color="lime" if DARK_MODE else "green",
-)
+# uncomment to generate total view graph
+# df["total_views"] = df["views"].cumsum()
+# save_graph(
+#     df["timestamp"],
+#     df["total_views"],
+#     f"Total {REPO_NAME} Views Over Time",
+#     "Total Views",
+#     "total_views.png",
+#     marker="s",
+#     color="lime" if DARK_MODE else "green",
+# )
 
 save_snapshot_graph(
     df,
@@ -174,12 +177,13 @@ save_snapshot_graph(
     color="red",
 )
 
-save_snapshot_graph(
-    df,
-    "total_stars",
-    f"Total {REPO_NAME} Stars Over Time",
-    "Total Stars",
-    "total_stars.png",
-    marker="*",
-    color="gold",
-)
+# uncomment to generate star graph
+# save_snapshot_graph(
+#     df,
+#     "total_stars",
+#     f"Total {REPO_NAME} Stars Over Time",
+#     "Total Stars",
+#     "total_stars.png",
+#     marker="*",
+#     color="gold",
+# )
