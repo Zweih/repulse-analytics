@@ -2,7 +2,7 @@ name: Repulse (GitHub Pulse Analytics)
 
 on:
   schedule:
-    - cron: '0 0 * * *' # runs daily at midnight UTC
+    - cron: '45 22 * * *' # runs daily at midnight UTC
   workflow_dispatch: # manual trigger
 
 permissions:
@@ -33,7 +33,6 @@ jobs:
           RUN_IDS=$(gh api repos/${{ github.repository }}/actions/runs --jq '[.workflow_runs | map(select(.conclusion=="success")) | .[].id]')
 
           if [[ -z "$RUN_IDS" || "$RUN_IDS" == "null" ]]; then
-            # echo "No previous successful workflow runs found. Starting fresh."
             echo "No previous successful workflow runs found. Attempting to download default backup..."
           else
             echo "Found successful workflow runs: $RUN_IDS"
@@ -58,15 +57,13 @@ jobs:
             echo "No previous github_traffic_db artifact found in past runs. Attempting to download default backup..."
           fi
 
-          DEFAULT_ARTIFACT_URL="https://github.com/Zweih/repulse-test/actions/runs/13911347537/artifacts/2768582786"
-          curl -L -o db_artifact.zip -H "Authorization: token $GITHUB_TOKEN" "$DEFAULT_ARTIFACT_URL"
+          RELEASE_URL="https://github.com/Zweih/repulse-analytics/releases/download/test/github_traffic.db"
+          curl -L -o data/github_traffic.db -H "Authorization: token $GITHUB_TOKEN" "$RELEASE_URL"
           
-          if [[ -f "db_artifact.zip" ]]; then
-            echo "Successfully downloaded default database artifact."
-            unzip db_artifact.zip -d data/
-            rm db_artifact.zip
+          if [[ -f "data/github_traffic.db" ]]; then
+            echo "Successfully downloaded default database from release."
           else
-            echo "Failed to download default database artifact. Proceeding with an empty database."
+            echo "Failed to download default database. Proceeding with an empty database."
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

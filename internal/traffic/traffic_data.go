@@ -134,7 +134,7 @@ func (d DownloadData) IsHistorical() bool {
 }
 
 func (d DownloadData) BuildUrl(owner string, repo string) string {
-	return fmt.Sprintf("%s/releases", buildRepoUrl(owner, repo))
+	return fmt.Sprintf("%s/releases?per_page=100", buildRepoUrl(owner, repo))
 }
 
 type StarsData struct {
