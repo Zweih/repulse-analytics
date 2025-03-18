@@ -98,6 +98,15 @@ jobs:
         run: |
           mkdir -p assets/graphs
 
+      - name: Verify SQLite Database File
+        run: |
+          if [[ -f "data/github_traffic.db" ]]; then
+            file data/github_traffic.db
+            sqlite3 data/github_traffic.db "PRAGMA integrity_check;"
+          else
+            echo "Database file does not exist. Proceeding with a new database."
+          fi
+
       - name: Run Repulse Analytics
         run: go run cmd/repulse/main.go
 
