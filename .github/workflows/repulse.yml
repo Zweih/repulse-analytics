@@ -1,0 +1,132 @@
+name: Repulse (GitHub Pulse Analytics)
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # runs daily at midnight UTC
+  workflow_dispatch: # manual trigger
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  repulse_analytics:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install GitHub CLI
+        run: sudo apt-get update && sudo apt-get install -y gh
+
+      - name: Authenticate GitHub CLI
+        run: gh auth setup-git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch and Download Previous Database Artifact via GitHub CLI
+        run: |
+          mkdir -p data
+          echo "Searching for the latest available github_traffic_db artifact..."
+          
+          RUN_IDS=$(gh api repos/${{ github.repository }}/actions/runs --jq '[.workflow_runs | map(select(.conclusion=="success")) | .[].id]')
+
+          if [[ -z "$RUN_IDS" || "$RUN_IDS" == "null" ]]; then
+            # echo "No previous successful workflow runs found. Starting fresh."
+            echo "No previous successful workflow runs found. Attempting to download default backup..."
+          else
+            echo "Found successful workflow runs: $RUN_IDS"
+            
+            for RUN_ID in $(echo "$RUN_IDS" | jq -r '.[]'); do
+              echo "Checking run ID: $RUN_ID for github_traffic_db artifact..."
+
+              ARTIFACT_ID=$(gh api repos/${{ github.repository }}/actions/runs/$RUN_ID/artifacts --jq '.artifacts | map(select(.name=="github_traffic_db")) | first | .id')
+
+              if [[ -n "$ARTIFACT_ID" && "$ARTIFACT_ID" != "null" ]]; then
+                echo "Found artifact ID: $ARTIFACT_ID in run ID: $RUN_ID"
+                
+                gh api -H "Accept: application/vnd.github.v3+json" \
+                  "repos/${{ github.repository }}/actions/artifacts/$ARTIFACT_ID/zip" > db_artifact.zip
+                unzip db_artifact.zip -d data/
+                rm db_artifact.zip
+                echo "Successfully restored previous database from run ID: $RUN_ID"
+                exit 0
+              fi
+            done
+
+            echo "No previous github_traffic_db artifact found in past runs. Attempting to download default backup..."
+          fi
+
+          DEFAULT_ARTIFACT_URL="https://github.com/Zweih/repulse-test/actions/runs/13911347537/artifacts/2768582786"
+          curl -L -o db_artifact.zip -H "Authorization: token $GITHUB_TOKEN" "$DEFAULT_ARTIFACT_URL"
+          
+          if [[ -f "db_artifact.zip" ]]; then
+            echo "Successfully downloaded default database artifact."
+            unzip db_artifact.zip -d data/
+            rm db_artifact.zip
+          else
+            echo "Failed to download default database artifact. Proceeding with an empty database."
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt || pip install matplotlib pandas dotenv
+
+      - name: Set up Go '1.23.5'
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.23.5'
+
+      - name: Install Go dependencies
+        run: go mod tidy
+
+      - name: Load environment variables
+        run: |
+          echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV
+          echo "OWNER=${{ secrets.OWNER }}" >> $GITHUB_ENV
+          echo "REPO=${{ secrets.REPO }}" >> $GITHUB_ENV
+
+      - name: Run Repulse Analytics
+        run: go run cmd/repulse/main.go
+
+      - name: Upload database artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github_traffic_db
+          path: data/github_traffic.db
+          retention-days: 7
+
+      - name: Commit and Push Graphs to Orphan Branch
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+          git fetch origin repulse-traffic-graphs || true
+          git checkout --orphan repulse-traffic-graphs || git checkout repulse-traffic-graphs
+
+          git rm -rf . || true
+
+          mkdir -p assets/graphs
+          cp -r assets/graphs/* .
+
+          git add *.png
+          git commit -m "Update traffic graphs"
+
+          # squash every 5 commits to keep history clean
+          commit_count=$(git rev-list --count HEAD)
+          if [ "$commit_count" -gt 5 ]; then
+            git reset $(git rev-list --max-parents=0 HEAD) # keep only the latest commit
+            git commit --amend -m "Squashed traffic graph updates"
+          fi
+
+          git push -f origin repulse-traffic-graphs
