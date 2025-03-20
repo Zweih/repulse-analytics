@@ -14,6 +14,6 @@ The CI then commits those graph PNGs to an orphan branch (the branch is squashed
 
 ## GitHub Traffic Graphs
 
-![Total Clones](https://raw.githubusercontent.com/Zweih/repulse-analytics/traffic-graphs/total_clones.png)
+![Total Clones](https://raw.githubusercontent.com/Zweih/repulse-analytics/refs/heads/traffic-graphs/total_clones.png)
 
-![Total Downloads](https://raw.githubusercontent.com/Zweih/repulse-analytics/traffic-graphs/total_downloads.png)
+![Total Downloads](https://raw.githubusercontent.com/Zweih/repulse-analytics/refs/heads/traffic-graphs/total_downloads.png)
