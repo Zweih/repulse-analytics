@@ -1,6 +1,6 @@
 # Repulse Analytics
 
-This is a prototype of a CI workflow that visualizes the long term GitHub traffic data for the [yaylog](https://github.com/Zweih/yaylog) repo. 
+This is a prototype of a CI workflow that visualizes the long term GitHub traffic data for the [qp](https://github.com/Zweih/qp) repo. 
 
 The CI workflow runs as a cronjob daily near (but not at) midnight UTC. 
 
