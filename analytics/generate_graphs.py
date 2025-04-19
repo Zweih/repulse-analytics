@@ -5,6 +5,12 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib.ticker import MaxNLocator
 from dotenv import load_dotenv
+import calendar
+import datetime
+
+today_weekday = datetime.datetime.today().weekday()
+weekday_name = calendar.day_name[today_weekday]
+print(f"Ticking every {weekday_name}")
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -60,7 +66,7 @@ def save_graph(x, y, title, ylabel, filename, marker, color):
 
     ax = plt.gca()
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
-    ax.xaxis.set_major_locator(mdates.DayLocator(interval=1))
+    ax.xaxis.set_major_locator(mdates.WeekdayLocator(byweekday=today_weekday))
     ax.yaxis.set_major_locator(MaxNLocator(integer=True))
 
     # plt.ylim(0, max(y) * 1.1 if len(y) > 0 else 1)
@@ -110,7 +116,7 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
 
     ax = plt.gca()
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
-    ax.xaxis.set_major_locator(mdates.DayLocator(interval=1))
+    ax.xaxis.set_major_locator(mdates.WeekdayLocator(byweekday=today_weekday))
     ax.yaxis.set_major_locator(MaxNLocator(integer=True))
 
     # max_val = df_filtered[column_name].max() if not df_filtered.empty else 1
