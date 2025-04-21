@@ -1,6 +1,7 @@
 package traffic
 
 import (
+	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
@@ -22,9 +23,12 @@ func FetchTrafficData[T TrafficResponse](
 	fmt.Printf("Fetching %s data from GitHub API...\n", dataType)
 	fmt.Println((*result).BuildUrl(owner, repo))
 
-	url := (*result).BuildUrl(owner, repo)
+	baseUrl := (*result).BuildUrl(owner, repo)
+	if dataType == TrafficDownloads {
+		return fetchPaginatedReleases(token, baseUrl, result)
+	}
 
-	response, err := makeGitHubRequest(token, url)
+	response, err := makeGitHubRequest(token, baseUrl)
 	if err != nil {
 		return fmt.Errorf("Error making %s request: %v\n", dataType, err)
 	}
@@ -42,6 +46,50 @@ func FetchTrafficData[T TrafficResponse](
 
 	fmt.Printf("%s data successfully fetched!\n", dataType)
 
+	return nil
+}
+
+func fetchPaginatedReleases[T TrafficResponse](token string, baseUrl string, result *T) error {
+	var allReleases []Release
+	page := 1
+
+	for {
+		url := fmt.Sprintf("%s&page=%d", baseUrl, page)
+		response, err := makeGitHubRequest(token, url)
+		if err != nil {
+			return fmt.Errorf("Error fetching releases (page %d): %v", page, err)
+		}
+		defer response.Body.Close()
+
+		var pageReleases []Release
+		bodyBytes, err := readResponseBody(response.Body, "downloads")
+		if err != nil {
+			return err
+		}
+
+		err = json.Unmarshal(bodyBytes, &pageReleases)
+		if err != nil {
+			return fmt.Errorf("Error parsing release page JSON (page %d): %v", page, err)
+		}
+
+		fmt.Println(len(pageReleases))
+
+		if len(pageReleases) == 0 {
+			break
+		}
+
+		allReleases = append(allReleases, pageReleases...)
+		page++
+	}
+
+	downloadData, ok := any(*result).(*DownloadData)
+	if !ok {
+		return fmt.Errorf("unexpected type for downloads: %T", *result)
+	}
+
+	downloadData.Releases = allReleases
+
+	fmt.Printf("Successfully fetched %d release(s).\n", len(allReleases))
 	return nil
 }
 
