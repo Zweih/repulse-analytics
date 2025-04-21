@@ -7,6 +7,8 @@ from matplotlib.ticker import MaxNLocator
 from dotenv import load_dotenv
 import calendar
 import datetime
+from scipy.interpolate import make_interp_spline
+import numpy as np
 
 today_weekday = datetime.datetime.today().weekday()
 weekday_name = calendar.day_name[today_weekday]
@@ -54,8 +56,28 @@ df.fillna(0, inplace=True)
 
 
 def save_graph(x, y, title, ylabel, filename, marker, color):
+    df_plot = pd.DataFrame({"timestamp": x, "value": y})
+    df_plot["timestamp"] = pd.to_datetime(df_plot["timestamp"])
+    df_plot = df_plot[df_plot["timestamp"].dt.weekday == today_weekday]
+
+    if df_plot.empty:
+        print(f"Skipping {filename} - No matching weekday data.")
+        return
+
+    x_dates = mdates.date2num(df_plot["timestamp"])
+    y_vals = df_plot["value"]
+
     plt.figure(figsize=(10, 5), dpi=300)
-    plt.plot(x, y, marker=marker, linestyle="-", label=title, color=color)
+
+    if len(x_dates) > 3:
+        x_smooth = np.linspace(x_dates.min(), x_dates.max(), 300)
+        spline = make_interp_spline(x_dates, y_vals, k=3)
+        y_smooth = spline(x_smooth)
+        plt.plot(mdates.num2date(x_smooth), y_smooth, color=color, label=title)
+
+    # Always show original points
+    plt.scatter(df_plot["timestamp"], y_vals, color=color, marker=marker, zorder=3)
+
     plt.xlabel("Date")
     plt.ylabel(ylabel)
     plt.title(title)
@@ -66,15 +88,15 @@ def save_graph(x, y, title, ylabel, filename, marker, color):
 
     ax = plt.gca()
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
-    ax.xaxis.set_major_locator(mdates.WeekdayLocator(byweekday=today_weekday))
+    ax.xaxis.set_major_locator(
+        mdates.WeekdayLocator(byweekday=today_weekday, interval=1)
+    )
     ax.yaxis.set_major_locator(MaxNLocator(integer=True))
 
-    # plt.ylim(0, max(y) * 1.1 if len(y) > 0 else 1)
-
-    if len(x) == 1:
-        plt.xlim(x.iloc[0], x.iloc[0] + pd.Timedelta(days=10))
+    if len(x_dates) == 1:
+        plt.xlim(mdates.num2date(x_dates[0]), mdates.num2date(x_dates[0] + 10))
     else:
-        plt.xlim(x.min(), x.max())
+        plt.xlim(mdates.num2date(x_dates.min()), mdates.num2date(x_dates.max()))
 
     filepath = os.path.join(OUTPUT_DIR, filename)
     plt.savefig(filepath, dpi=300, bbox_inches="tight")
@@ -82,30 +104,35 @@ def save_graph(x, y, title, ylabel, filename, marker, color):
 
 
 def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color):
-    non_zero_data = df[df[column_name] > 0]
+    df_filtered = df[df[column_name] > 0].copy()
+    df_filtered["timestamp"] = pd.to_datetime(df_filtered["timestamp"])
+    df_filtered = df_filtered[df_filtered["timestamp"].dt.weekday == today_weekday]
 
-    if not non_zero_data.empty:
-        df_filtered = non_zero_data
-        first_date = df_filtered["timestamp"].iloc[0]
-        last_date = df_filtered["timestamp"].iloc[-1]
-
-        if (last_date - first_date).days < 3:
-            x_axis_end = first_date + pd.Timedelta(days=3)
-        else:
-            x_axis_end = last_date
-    else:
-        print(f"Skipping {filename} - No non-zero data.")
+    if df_filtered.empty:
+        print(f"Skipping {filename} - No matching weekday data.")
         return
 
-    plt.figure(figsize=(10, 5), dpi=300)
-    plt.plot(
-        df_filtered["timestamp"],
-        df_filtered[column_name],
-        marker=marker,
-        linestyle="-",
-        label=title,
-        color=color,
+    x_dates = mdates.date2num(df_filtered["timestamp"])
+    y_vals = df_filtered[column_name]
+
+    first_date = df_filtered["timestamp"].iloc[0]
+    last_date = df_filtered["timestamp"].iloc[-1]
+    x_axis_end = (
+        last_date
+        if (last_date - first_date).days >= 3
+        else first_date + pd.Timedelta(days=3)
     )
+
+    plt.figure(figsize=(10, 5), dpi=300)
+
+    if len(x_dates) > 3:
+        x_smooth = np.linspace(x_dates.min(), x_dates.max(), 300)
+        spline = make_interp_spline(x_dates, y_vals, k=3)
+        y_smooth = spline(x_smooth)
+        plt.plot(mdates.num2date(x_smooth), y_smooth, color=color, label=title)
+
+    plt.scatter(df_filtered["timestamp"], y_vals, color=color, marker=marker, zorder=3)
+
     plt.xlabel("Date")
     plt.ylabel(ylabel)
     plt.title(title)
@@ -116,11 +143,10 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
 
     ax = plt.gca()
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
-    ax.xaxis.set_major_locator(mdates.WeekdayLocator(byweekday=today_weekday))
+    ax.xaxis.set_major_locator(
+        mdates.WeekdayLocator(byweekday=today_weekday, interval=1)
+    )
     ax.yaxis.set_major_locator(MaxNLocator(integer=True))
-
-    # max_val = df_filtered[column_name].max() if not df_filtered.empty else 1
-    # plt.ylim(0, max_val * 1.1)
     plt.xlim(first_date, x_axis_end)
 
     filepath = os.path.join(OUTPUT_DIR, filename)
