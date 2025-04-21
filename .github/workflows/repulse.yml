@@ -83,7 +83,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt || pip install matplotlib pandas dotenv
+          pip install -r requirements.txt || pip install matplotlib pandas dotenv scipy
 
       - name: Set up Go '1.23.5'
         uses: actions/setup-go@v4
