@@ -73,9 +73,10 @@ def save_graph(x, y, title, ylabel, filename, marker, color):
         x_smooth = np.linspace(x_dates.min(), x_dates.max(), 300)
         spline = make_interp_spline(x_dates, y_vals, k=3)
         y_smooth = spline(x_smooth)
-        plt.plot(mdates.num2date(x_smooth), y_smooth, color=color, label=title)
+        plt.plot(
+            mdates.num2date(x_smooth), y_smooth, color=color, label=title, linewidth=2.5
+        )
 
-    # Always show original points
     plt.scatter(df_plot["timestamp"], y_vals, color=color, marker=marker, zorder=3)
 
     plt.xlabel("Date")
@@ -83,7 +84,8 @@ def save_graph(x, y, title, ylabel, filename, marker, color):
     plt.title(title)
     plt.xticks(rotation=45)
     plt.legend()
-    plt.grid(True, linestyle="--" if DARK_MODE else "-")
+    # plt.grid(True, linestyle="--" if DARK_MODE else "-")
+    plt.grid(True, linestyle="-", linewidth=0.5, alpha=0.2)
     plt.tight_layout()
 
     ax = plt.gca()
@@ -129,7 +131,9 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
         x_smooth = np.linspace(x_dates.min(), x_dates.max(), 300)
         spline = make_interp_spline(x_dates, y_vals, k=3)
         y_smooth = spline(x_smooth)
-        plt.plot(mdates.num2date(x_smooth), y_smooth, color=color, label=title)
+        plt.plot(
+            mdates.num2date(x_smooth), y_smooth, color=color, label=title, linewidth=2.5
+        )
 
     plt.scatter(df_filtered["timestamp"], y_vals, color=color, marker=marker, zorder=3)
 
@@ -138,7 +142,8 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
     plt.title(title)
     plt.xticks(rotation=45)
     plt.legend()
-    plt.grid(True, linestyle="--" if DARK_MODE else "-")
+    # plt.grid(True, linestyle="-")
+    plt.grid(True, linestyle="-", linewidth=0.5, alpha=0.2)
     plt.tight_layout()
 
     ax = plt.gca()
@@ -184,10 +189,10 @@ save_graph(
     "Total Clones",
     "total_clones.png",
     marker="o",
-    color="cyan" if DARK_MODE else "blue",
+    color="lime",
 )
 
-# uncomment to generate total view graph
+# # uncomment to generate total view graph
 # df["total_views"] = df["views"].cumsum()
 # save_graph(
 #     df["timestamp"],
@@ -205,8 +210,8 @@ save_snapshot_graph(
     f"Total {REPO_NAME} Downloads Over Time",
     "Total Downloads",
     "total_downloads.png",
-    marker="^",
-    color="red",
+    marker="o",
+    color="cyan",
 )
 
 # uncomment to generate star graph
