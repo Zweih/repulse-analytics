@@ -142,7 +142,7 @@ jobs:
           cp -r assets/graphs/* .
           cp -r assets/badges/* .
 
-          git add *.png *.svg
+          git add *.svg
           git commit -m "Update traffic graphs"
 
           # squash every 5 commits to keep history clean
