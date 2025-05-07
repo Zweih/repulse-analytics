@@ -51,7 +51,8 @@ node_modules/
 *.db-journal
 *.sqlite
 
-assets/
+/assets/*
+!/assets/qp-logo-query-packages.svg
 assets/graphs/
 assets/badges/
 graphs/
