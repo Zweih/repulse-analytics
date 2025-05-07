@@ -130,11 +130,11 @@ jobs:
 
       - name: Commit and Push Graphs to Orphan Branch
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          git fetch origin repulse-traffic-graphs || true
-          git checkout --orphan repulse-traffic-graphs || git checkout repulse-traffic-graphs
+          git fetch origin gh-pages || true
+          git checkout --orphan gh-pages || git checkout gh-pages
 
           git rm -rf . || true
 
@@ -152,4 +152,4 @@ jobs:
             git commit --amend -m "Squashed traffic graph updates"
           fi
 
-          git push -f origin repulse-traffic-graphs
+          git push -f origin gh-pages
