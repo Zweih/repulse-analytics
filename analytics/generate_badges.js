@@ -34,5 +34,5 @@ const createBadge = (label, message, color, filename) => {
   console.log(`Badge saved to ${outputPath}`);
 };
 
-createBadge("Downloads Since 2/4/2025", total_downloads, "#1793d1", "downloads-badge.svg");
-createBadge("Clones Since 2/4/2025", total_clones, '#2ea44f', "clones-badge.svg");
+createBadge("Downloads Since 2/4/2025", total_downloads, "#1793d1", "downloads_badge.svg");
+createBadge("Clones Since 2/4/2025", total_clones, '#2ea44f', "clones_badge.svg");
