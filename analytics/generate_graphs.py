@@ -156,7 +156,7 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
     plt.xlim(first_date, x_axis_end)
 
     filepath = os.path.join(OUTPUT_DIR, filename)
-    plt.savefig(filepath, dpi=300, bbox_inches="tight")
+    plt.savefig(filepath, format="svg", dpi=300, bbox_inches="tight")
     print(f"Graph saved as {filepath}")
 
 
@@ -166,7 +166,7 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
 #     df["clones"],
 #     f"{REPO_NAME} Daily Clones Over Time",
 #     "Number of Clones",
-#     "daily_clones.png",
+#     "daily_clones.svg",
 #     marker="o",
 #     color="cyan" if DARK_MODE else "blue",
 # )
@@ -177,7 +177,7 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
 #     df["views"],
 #     f"{REPO_NAME} Daily Views Over Time",
 #     "Number of Views",
-#     "daily_views.png",
+#     "daily_views.svg",
 #     marker="s",
 #     color="lime" if DARK_MODE else "green",
 # )
@@ -188,7 +188,7 @@ save_graph(
     df["total_clones"],
     f"Total {REPO_NAME} Clones Over Time",
     "Total Clones",
-    "total_clones.png",
+    "total_clones.svg",
     marker="o",
     color="#2ea44f",
 )
@@ -200,7 +200,7 @@ save_graph(
 #     df["total_views"],
 #     f"Total {REPO_NAME} Views Over Time",
 #     "Total Views",
-#     "total_views.png",
+#     "total_views.svg",
 #     marker="s",
 #     color="lime" if DARK_MODE else "green",
 # )
@@ -210,7 +210,7 @@ save_snapshot_graph(
     "total_downloads",
     f"Total {REPO_NAME} Downloads Over Time",
     "Total Downloads",
-    "total_downloads.png",
+    "total_downloads.svg",
     marker="o",
     color="#1793d1",
 )
@@ -221,7 +221,7 @@ save_snapshot_graph(
 #     "total_stars",
 #     f"Total {REPO_NAME} Stars Over Time",
 #     "Total Stars",
-#     "total_stars.png",
+#     "total_stars.svg",
 #     marker="*",
 #     color="gold",
 # )
