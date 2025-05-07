@@ -10,6 +10,7 @@ import datetime
 from scipy.interpolate import make_interp_spline
 import numpy as np
 import json
+from lxml import etree
 
 today_weekday = datetime.datetime.today().weekday()
 weekday_name = calendar.day_name[today_weekday]
@@ -85,7 +86,6 @@ def save_graph(x, y, title, ylabel, filename, marker, color):
     plt.title(title)
     plt.xticks(rotation=45)
     plt.legend()
-    # plt.grid(True, linestyle="--" if DARK_MODE else "-")
     plt.grid(True, linestyle="-", linewidth=0.5, alpha=0.2)
     plt.tight_layout()
 
@@ -102,7 +102,7 @@ def save_graph(x, y, title, ylabel, filename, marker, color):
         plt.xlim(mdates.num2date(x_dates.min()), mdates.num2date(x_dates.max()))
 
     filepath = os.path.join(OUTPUT_DIR, filename)
-    plt.savefig(filepath, dpi=300, bbox_inches="tight")
+    plt.savefig(filepath, format="svg", bbox_inches="tight")
     print(f"Graph saved as {filepath}")
 
 
@@ -143,7 +143,6 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
     plt.title(title)
     plt.xticks(rotation=45)
     plt.legend()
-    # plt.grid(True, linestyle="-")
     plt.grid(True, linestyle="-", linewidth=0.5, alpha=0.2)
     plt.tight_layout()
 
@@ -156,7 +155,7 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
     plt.xlim(first_date, x_axis_end)
 
     filepath = os.path.join(OUTPUT_DIR, filename)
-    plt.savefig(filepath, format="svg", dpi=300, bbox_inches="tight")
+    plt.savefig(filepath, format="svg", bbox_inches="tight")
     print(f"Graph saved as {filepath}")
 
 
@@ -225,6 +224,45 @@ save_snapshot_graph(
 #     marker="*",
 #     color="gold",
 # )
+
+
+def glue_svgs_horizontally(svg_paths, output_path):
+    svgs = [etree.parse(os.path.join(OUTPUT_DIR, path)).getroot() for path in svg_paths]
+    widths = [float(svg.get("width", "800").replace("pt", "")) for svg in svgs]
+    heights = [float(svg.get("height", "400").replace("pt", "")) for svg in svgs]
+
+    total_width = sum(widths)
+    max_height = max(heights)
+
+    out_svg = etree.Element(
+        "svg",
+        xmlns="http://www.w3.org/2000/svg",
+        width=str(total_width),
+        height=str(max_height),
+    )
+
+    x_offset = 0
+    for svg, w in zip(svgs, widths):
+        g = etree.SubElement(out_svg, "g", transform=f"translate({x_offset}, 0)")
+        for element in svg:
+            g.append(element)
+        x_offset += w
+
+    etree.ElementTree(out_svg).write(
+        os.path.join(OUTPUT_DIR, output_path),
+        pretty_print=True,
+        xml_declaration=True,
+        encoding="utf-8",
+    )
+
+
+glue_svgs_horizontally(
+    [
+        "total_downloads.svg",
+        "total_clones.svg",
+    ],
+    "combined_graphs.svg",
+)
 
 BADGE_DATA_DIR = os.path.join(BASE_DIR, "assets")
 
