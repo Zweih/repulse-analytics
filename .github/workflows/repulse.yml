@@ -116,6 +116,11 @@ jobs:
       - name: Run Repulse Analytics
         run: go run cmd/repulse/main.go
 
+      - name: Generate Traffic Badges
+        run: |
+          npm install --prefix analytics
+          node analytics/generate_badges.js
+
       - name: Upload database artifact
         uses: actions/upload-artifact@v4
         with:
@@ -133,10 +138,11 @@ jobs:
 
           git rm -rf . || true
 
-          mkdir -p assets/graphs
+          mkdir -p assets/graphs assets/badges
           cp -r assets/graphs/* .
+          cp -r assets/badges/* .
 
-          git add *.png
+          git add *.png *.svg
           git commit -m "Update traffic graphs"
 
           # squash every 5 commits to keep history clean

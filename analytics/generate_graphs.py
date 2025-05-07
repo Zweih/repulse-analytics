@@ -9,6 +9,7 @@ import calendar
 import datetime
 from scipy.interpolate import make_interp_spline
 import numpy as np
+import json
 
 today_weekday = datetime.datetime.today().weekday()
 weekday_name = calendar.day_name[today_weekday]
@@ -189,10 +190,10 @@ save_graph(
     "Total Clones",
     "total_clones.png",
     marker="o",
-    color="lime",
+    color="#2ea44f",
 )
 
-# # uncomment to generate total view graph
+# uncomment to generate total view graph
 # df["total_views"] = df["views"].cumsum()
 # save_graph(
 #     df["timestamp"],
@@ -211,7 +212,7 @@ save_snapshot_graph(
     "Total Downloads",
     "total_downloads.png",
     marker="o",
-    color="cyan",
+    color="#1793d1",
 )
 
 # uncomment to generate star graph
@@ -224,3 +225,17 @@ save_snapshot_graph(
 #     marker="*",
 #     color="gold",
 # )
+
+BADGE_DATA_DIR = os.path.join(BASE_DIR, "assets")
+
+os.makedirs(BADGE_DATA_DIR, exist_ok=True)
+badge_data = {
+    "total_clones": int(df["clones"].sum()),
+    "total_downloads": int(df.sort_values("timestamp")["total_downloads"].iloc[-1]),
+}
+
+badge_data_path = os.path.join(BADGE_DATA_DIR, "badge_data.json")
+with open(badge_data_path, "w") as f:
+    json.dump(badge_data, f)
+
+print(f"Badge data written to {badge_data_path}")

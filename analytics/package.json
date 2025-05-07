@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "badge-maker": "^4.1.0"
+  },
+  "name": "analytics",
+  "version": "1.0.0",
+  "main": "generate_badges.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}

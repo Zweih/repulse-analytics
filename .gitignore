@@ -51,7 +51,9 @@ node_modules/
 *.db-journal
 *.sqlite
 
+assets/
 assets/graphs/
+assets/badges/
 graphs/
 
 __pycache__/
