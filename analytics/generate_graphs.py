@@ -1,6 +1,7 @@
 import os
 import sqlite3
 import pandas as pd
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib.ticker import MaxNLocator
@@ -10,6 +11,7 @@ import datetime
 from scipy.interpolate import make_interp_spline
 import numpy as np
 import json
+import logging
 from lxml import etree
 
 today_weekday = datetime.datetime.today().weekday()
@@ -56,6 +58,19 @@ conn.close()
 df["timestamp"] = pd.to_datetime(df["timestamp"]).dt.date
 df.fillna(0, inplace=True)
 
+matplotlib_logger = logging.getLogger("matplotlib.font_manager")
+matplotlib_logger.setLevel(logging.ERROR)
+
+mpl.rcParams.update({
+    "svg.fonttype": "none",
+    "font.family": "Helvetica",
+    "font.size": 12,
+    "axes.titlesize": 14,
+    "axes.labelsize": 12,
+    "xtick.labelsize": 8,
+    "ytick.labelsize": 12,
+})
+
 
 def save_graph(x, y, title, ylabel, filename, marker, color):
     df_plot = pd.DataFrame({"timestamp": x, "value": y})
@@ -69,7 +84,7 @@ def save_graph(x, y, title, ylabel, filename, marker, color):
     x_dates = mdates.date2num(df_plot["timestamp"])
     y_vals = df_plot["value"]
 
-    plt.figure(figsize=(10, 5), dpi=300)
+    plt.figure(figsize=(7, 5), dpi=100)
 
     if len(x_dates) > 3:
         x_smooth = np.linspace(x_dates.min(), x_dates.max(), 300)
@@ -85,12 +100,11 @@ def save_graph(x, y, title, ylabel, filename, marker, color):
     plt.ylabel(ylabel)
     plt.title(title)
     plt.xticks(rotation=45)
-    plt.legend()
     plt.grid(True, linestyle="-", linewidth=0.5, alpha=0.2)
     plt.tight_layout()
 
     ax = plt.gca()
-    ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%-m-%-d-%Y"))
     ax.xaxis.set_major_locator(
         mdates.WeekdayLocator(byweekday=today_weekday, interval=1)
     )
@@ -102,7 +116,7 @@ def save_graph(x, y, title, ylabel, filename, marker, color):
         plt.xlim(mdates.num2date(x_dates.min()), mdates.num2date(x_dates.max()))
 
     filepath = os.path.join(OUTPUT_DIR, filename)
-    plt.savefig(filepath, format="svg", bbox_inches="tight")
+    plt.savefig(filepath, format="svg", bbox_inches="tight", dpi=100)
     print(f"Graph saved as {filepath}")
 
 
@@ -126,7 +140,7 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
         else first_date + pd.Timedelta(days=3)
     )
 
-    plt.figure(figsize=(10, 5), dpi=300)
+    plt.figure(figsize=(7, 5), dpi=100)
 
     if len(x_dates) > 3:
         x_smooth = np.linspace(x_dates.min(), x_dates.max(), 300)
@@ -142,12 +156,11 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
     plt.ylabel(ylabel)
     plt.title(title)
     plt.xticks(rotation=45)
-    plt.legend()
     plt.grid(True, linestyle="-", linewidth=0.5, alpha=0.2)
     plt.tight_layout()
 
     ax = plt.gca()
-    ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%-m-%-d-%Y"))
     ax.xaxis.set_major_locator(
         mdates.WeekdayLocator(byweekday=today_weekday, interval=1)
     )
@@ -155,7 +168,7 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
     plt.xlim(first_date, x_axis_end)
 
     filepath = os.path.join(OUTPUT_DIR, filename)
-    plt.savefig(filepath, format="svg", bbox_inches="tight")
+    plt.savefig(filepath, format="svg", bbox_inches="tight", dpi=100)
     print(f"Graph saved as {filepath}")
 
 
@@ -185,8 +198,8 @@ df["total_clones"] = df["clones"].cumsum()
 save_graph(
     df["timestamp"],
     df["total_clones"],
-    f"Total {REPO_NAME} Clones Over Time",
-    "Total Clones",
+    f"Total {REPO_NAME} Clones",
+    "Clones",
     "total_clones.svg",
     marker="o",
     color="#2ea44f",
@@ -207,8 +220,8 @@ save_graph(
 save_snapshot_graph(
     df,
     "total_downloads",
-    f"Total {REPO_NAME} Downloads Over Time",
-    "Total Downloads",
+    f"Total {REPO_NAME} Downloads",
+    "Downloads",
     "total_downloads.svg",
     marker="o",
     color="#1793d1",
