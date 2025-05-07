@@ -133,6 +133,8 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+          cp assets/qp-logo-query-packages.svg /tmp/qp-logo-query-packages.svg
+
           git fetch origin gh-pages || true
           git checkout --orphan gh-pages || git checkout gh-pages
 
@@ -141,6 +143,7 @@ jobs:
           mkdir -p assets/graphs assets/badges
           cp -r assets/graphs/* .
           cp -r assets/badges/* .
+          cp /tmp/qp-logo-query-packages.svg .
 
           git add *.svg
           git commit -m "Update traffic graphs"
