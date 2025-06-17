@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib.ticker import MaxNLocator
 from dotenv import load_dotenv
-import calendar
 import datetime
 from scipy.interpolate import make_interp_spline
 import numpy as np
@@ -14,9 +13,8 @@ import json
 import logging
 from lxml import etree
 
-today_weekday = datetime.datetime.today().weekday()
-weekday_name = calendar.day_name[today_weekday]
-print(f"Ticking every {weekday_name}")
+today = datetime.datetime.today().date()
+print(f"Ticking every 30 days from {today}")
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -72,15 +70,40 @@ mpl.rcParams.update({
 })
 
 
+def filter_to_30_day_intervals(df_plot):
+    target_dates = []
+    current_date = today
+    min_date = df_plot["timestamp"].min()
+
+    while current_date >= min_date:
+        target_dates.append(current_date)
+        current_date = current_date - datetime.timedelta(days=30)
+
+    def find_closest_date(target, available_dates):
+        return min(available_dates, key=lambda x: abs((x - target).days))
+
+    filtered_dates = []
+    available_dates = df_plot["timestamp"].tolist()
+
+    for target in target_dates:
+        if available_dates:
+            closest = find_closest_date(target, available_dates)
+            if closest not in filtered_dates:
+                filtered_dates.append(closest)
+
+    return df_plot[df_plot["timestamp"].isin(filtered_dates)]
+
+
 def save_graph(x, y, title, ylabel, filename, marker, color):
     df_plot = pd.DataFrame({"timestamp": x, "value": y})
-    df_plot["timestamp"] = pd.to_datetime(df_plot["timestamp"])
-    df_plot = df_plot[df_plot["timestamp"].dt.weekday == today_weekday]
+    df_plot["timestamp"] = pd.to_datetime(df_plot["timestamp"]).dt.date
+    df_plot = filter_to_30_day_intervals(df_plot)
 
     if df_plot.empty:
-        print(f"Skipping {filename} - No matching weekday data.")
+        print(f"Skipping {filename} - No matching interval data.")
         return
 
+    df_plot["timestamp"] = pd.to_datetime(df_plot["timestamp"])
     x_dates = mdates.date2num(df_plot["timestamp"])
     y_vals = df_plot["value"]
 
@@ -105,9 +128,7 @@ def save_graph(x, y, title, ylabel, filename, marker, color):
 
     ax = plt.gca()
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%-m-%-d-%Y"))
-    ax.xaxis.set_major_locator(
-        mdates.WeekdayLocator(byweekday=today_weekday, interval=1)
-    )
+    ax.set_xticks(df_plot["timestamp"])
     ax.yaxis.set_major_locator(MaxNLocator(integer=True))
 
     if len(x_dates) == 1:
@@ -122,13 +143,14 @@ def save_graph(x, y, title, ylabel, filename, marker, color):
 
 def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color):
     df_filtered = df[df[column_name] > 0].copy()
-    df_filtered["timestamp"] = pd.to_datetime(df_filtered["timestamp"])
-    df_filtered = df_filtered[df_filtered["timestamp"].dt.weekday == today_weekday]
+    df_filtered["timestamp"] = pd.to_datetime(df_filtered["timestamp"]).dt.date
+    df_filtered = filter_to_30_day_intervals(df_filtered)
 
     if df_filtered.empty:
-        print(f"Skipping {filename} - No matching weekday data.")
+        print(f"Skipping {filename} - No matching interval data.")
         return
 
+    df_filtered["timestamp"] = pd.to_datetime(df_filtered["timestamp"])
     x_dates = mdates.date2num(df_filtered["timestamp"])
     y_vals = df_filtered[column_name]
 
@@ -136,8 +158,8 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
     last_date = df_filtered["timestamp"].iloc[-1]
     x_axis_end = (
         last_date
-        if (last_date - first_date).days >= 3
-        else first_date + pd.Timedelta(days=3)
+        if (last_date - first_date).days >= 30
+        else first_date + pd.Timedelta(days=30)
     )
 
     plt.figure(figsize=(7, 5), dpi=100)
@@ -161,9 +183,7 @@ def save_snapshot_graph(df, column_name, title, ylabel, filename, marker, color)
 
     ax = plt.gca()
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%-m-%-d-%Y"))
-    ax.xaxis.set_major_locator(
-        mdates.WeekdayLocator(byweekday=today_weekday, interval=1)
-    )
+    ax.set_xticks(df_filtered["timestamp"])
     ax.yaxis.set_major_locator(MaxNLocator(integer=True))
     plt.xlim(first_date, x_axis_end)
 
