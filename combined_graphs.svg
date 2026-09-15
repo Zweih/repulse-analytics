@@ -1,0 +1,944 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1017.438262" height="356.620035">
+  <g transform="translate(0, 0)"><ns0:metadata xmlns:ns0="http://www.w3.org/2000/svg">
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-15T00:53:38.283431</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </ns0:metadata>
+ <ns1:defs xmlns:ns1="http://www.w3.org/2000/svg">
+  <ns1:style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</ns1:style>
+ </ns1:defs>
+ <ns2:g xmlns:ns2="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="figure_1">
+  <ns2:g id="patch_1">
+   <ns2:path d="M 0 356.620035  L 508.719131 356.620035  L 508.719131 0  L 0 0  z "/>
+  </ns2:g>
+  <ns2:g id="axes_1">
+   <ns2:g id="patch_2">
+    <ns2:path d="M 60.35375 288.456348  L 484.14375 288.456348  L 484.14375 23.837812  L 60.35375 23.837812  z "/>
+   </ns2:g>
+   <ns2:g id="matplotlib.axis_1">
+    <ns2:g id="xtick_1">
+     <ns2:g id="line2d_1">
+      <ns2:path d="M 60.35375 288.456348  L 60.35375 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_2">
+      <ns2:defs>
+       <ns2:path id="mcd87dff2fc" d="M 0 0  L 0 3.5  " style="stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:defs>
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="60.35375" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_1">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(47.276694 329.030662) rotate(-45)">3-24-2025</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_2">
+     <ns2:g id="line2d_3">
+      <ns2:path d="M 83.897639 288.456348  L 83.897639 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_4">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="83.897639" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_2">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(70.820583 329.030662) rotate(-45)">4-23-2025</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_3">
+     <ns2:g id="line2d_5">
+      <ns2:path d="M 107.441528 288.456348  L 107.441528 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_6">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="107.441528" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_3">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(94.364472 329.030662) rotate(-45)">5-23-2025</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_4">
+     <ns2:g id="line2d_7">
+      <ns2:path d="M 130.985417 288.456348  L 130.985417 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_8">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="130.985417" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_4">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(117.908361 329.030662) rotate(-45)">6-22-2025</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_5">
+     <ns2:g id="line2d_9">
+      <ns2:path d="M 154.529306 288.456348  L 154.529306 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_10">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="154.529306" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_5">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(141.45225 329.030662) rotate(-45)">7-22-2025</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_6">
+     <ns2:g id="line2d_11">
+      <ns2:path d="M 178.073194 288.456348  L 178.073194 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_12">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="178.073194" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_6">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(164.996138 329.030662) rotate(-45)">8-21-2025</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_7">
+     <ns2:g id="line2d_13">
+      <ns2:path d="M 201.617083 288.456348  L 201.617083 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_14">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="201.617083" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_7">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(188.540027 329.030662) rotate(-45)">9-20-2025</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_8">
+     <ns2:g id="line2d_15">
+      <ns2:path d="M 225.160972 288.456348  L 225.160972 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_16">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="225.160972" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_8">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(210.284329 332.629836) rotate(-45)">10-20-2025</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_9">
+     <ns2:g id="line2d_17">
+      <ns2:path d="M 248.704861 288.456348  L 248.704861 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_18">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="248.704861" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_9">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(233.828218 332.629836) rotate(-45)">11-19-2025</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_10">
+     <ns2:g id="line2d_19">
+      <ns2:path d="M 272.24875 288.456348  L 272.24875 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_20">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="272.24875" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_10">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(257.372107 332.629836) rotate(-45)">12-19-2025</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_11">
+     <ns2:g id="line2d_21">
+      <ns2:path d="M 295.792639 288.456348  L 295.792639 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_22">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="295.792639" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_11">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(282.715583 329.030662) rotate(-45)">1-18-2026</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_12">
+     <ns2:g id="line2d_23">
+      <ns2:path d="M 319.336528 288.456348  L 319.336528 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_24">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="319.336528" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_12">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(306.259472 329.030662) rotate(-45)">2-17-2026</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_13">
+     <ns2:g id="line2d_25">
+      <ns2:path d="M 342.880417 288.456348  L 342.880417 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_26">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="342.880417" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_13">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(329.803361 329.030662) rotate(-45)">3-19-2026</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_14">
+     <ns2:g id="line2d_27">
+      <ns2:path d="M 366.424306 288.456348  L 366.424306 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_28">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="366.424306" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_14">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(353.34725 329.030662) rotate(-45)">4-18-2026</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_15">
+     <ns2:g id="line2d_29">
+      <ns2:path d="M 389.968194 288.456348  L 389.968194 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_30">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="389.968194" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_15">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(376.891138 329.030662) rotate(-45)">5-18-2026</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_16">
+     <ns2:g id="line2d_31">
+      <ns2:path d="M 413.512083 288.456348  L 413.512083 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_32">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="413.512083" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_16">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(400.435027 329.030662) rotate(-45)">6-17-2026</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_17">
+     <ns2:g id="line2d_33">
+      <ns2:path d="M 437.055972 288.456348  L 437.055972 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_34">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="437.055972" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_17">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(423.978916 329.030662) rotate(-45)">7-17-2026</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_18">
+     <ns2:g id="line2d_35">
+      <ns2:path d="M 460.599861 288.456348  L 460.599861 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_36">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="460.599861" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_18">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(447.522805 329.030662) rotate(-45)">8-16-2026</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="xtick_19">
+     <ns2:g id="line2d_37">
+      <ns2:path d="M 484.14375 288.456348  L 484.14375 23.837812  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_38">
+      <ns2:g>
+       <ns2:use xlink:href="#mcd87dff2fc" x="484.14375" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_19">
+      <ns2:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(471.066694 329.030662) rotate(-45)">9-15-2026</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="text_20">
+     <ns2:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: middle" x="272.24875" y="346.92441" transform="rotate(-0 272.24875 346.92441)">Date</ns2:text>
+    </ns2:g>
+   </ns2:g>
+   <ns2:g id="matplotlib.axis_2">
+    <ns2:g id="ytick_1">
+     <ns2:g id="line2d_39">
+      <ns2:path d="M 60.35375 267.972355  L 484.14375 267.972355  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_40">
+      <ns2:defs>
+       <ns2:path id="m44c04dd65f" d="M 0 0  L -3.5 0  " style="stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:defs>
+      <ns2:g>
+       <ns2:use xlink:href="#m44c04dd65f" x="60.35375" y="267.972355" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_21">
+      <ns2:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="272.531418" transform="rotate(-0 53.35375 272.531418)">1000</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="ytick_2">
+     <ns2:g id="line2d_41">
+      <ns2:path d="M 60.35375 238.302609  L 484.14375 238.302609  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_42">
+      <ns2:g>
+       <ns2:use xlink:href="#m44c04dd65f" x="60.35375" y="238.302609" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_22">
+      <ns2:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="242.861671" transform="rotate(-0 53.35375 242.861671)">2000</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="ytick_3">
+     <ns2:g id="line2d_43">
+      <ns2:path d="M 60.35375 208.632862  L 484.14375 208.632862  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_44">
+      <ns2:g>
+       <ns2:use xlink:href="#m44c04dd65f" x="60.35375" y="208.632862" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_23">
+      <ns2:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="213.191925" transform="rotate(-0 53.35375 213.191925)">3000</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="ytick_4">
+     <ns2:g id="line2d_45">
+      <ns2:path d="M 60.35375 178.963115  L 484.14375 178.963115  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_46">
+      <ns2:g>
+       <ns2:use xlink:href="#m44c04dd65f" x="60.35375" y="178.963115" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_24">
+      <ns2:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="183.522178" transform="rotate(-0 53.35375 183.522178)">4000</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="ytick_5">
+     <ns2:g id="line2d_47">
+      <ns2:path d="M 60.35375 149.293369  L 484.14375 149.293369  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_48">
+      <ns2:g>
+       <ns2:use xlink:href="#m44c04dd65f" x="60.35375" y="149.293369" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_25">
+      <ns2:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="153.852431" transform="rotate(-0 53.35375 153.852431)">5000</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="ytick_6">
+     <ns2:g id="line2d_49">
+      <ns2:path d="M 60.35375 119.623622  L 484.14375 119.623622  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_50">
+      <ns2:g>
+       <ns2:use xlink:href="#m44c04dd65f" x="60.35375" y="119.623622" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_26">
+      <ns2:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="124.182685" transform="rotate(-0 53.35375 124.182685)">6000</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="ytick_7">
+     <ns2:g id="line2d_51">
+      <ns2:path d="M 60.35375 89.953876  L 484.14375 89.953876  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_52">
+      <ns2:g>
+       <ns2:use xlink:href="#m44c04dd65f" x="60.35375" y="89.953876" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_27">
+      <ns2:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="94.512938" transform="rotate(-0 53.35375 94.512938)">7000</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="ytick_8">
+     <ns2:g id="line2d_53">
+      <ns2:path d="M 60.35375 60.284129  L 484.14375 60.284129  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_54">
+      <ns2:g>
+       <ns2:use xlink:href="#m44c04dd65f" x="60.35375" y="60.284129" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_28">
+      <ns2:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="64.843192" transform="rotate(-0 53.35375 64.843192)">8000</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="ytick_9">
+     <ns2:g id="line2d_55">
+      <ns2:path d="M 60.35375 30.614383  L 484.14375 30.614383  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns2:g>
+     <ns2:g id="line2d_56">
+      <ns2:g>
+       <ns2:use xlink:href="#m44c04dd65f" x="60.35375" y="30.614383" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns2:g>
+     </ns2:g>
+     <ns2:g id="text_29">
+      <ns2:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="35.173445" transform="rotate(-0 53.35375 35.173445)">9000</ns2:text>
+     </ns2:g>
+    </ns2:g>
+    <ns2:g id="text_30">
+     <ns2:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: middle" x="16.318125" y="156.14708" transform="rotate(-90 16.318125 156.14708)">Downloads</ns2:text>
+    </ns2:g>
+   </ns2:g>
+   <ns2:g id="line2d_57">
+    <ns2:path d="M 60.35375 276.428233  L 64.605824 269.933665  L 68.857897 263.868158  L 75.944686 254.257469  L 83.031476 244.597754  L 87.283549 238.455768  L 91.535623 231.849422  L 94.370339 227.10449  L 97.205054 222.029088  L 100.03977 216.573583  L 102.874486 210.688341  L 105.709202 204.323726  L 108.543917 197.432349  L 112.795991 186.246583  L 122.717496 159.266181  L 125.552212 152.138911  L 128.386927 145.599142  L 131.221643 139.82635  L 134.056359 134.938969  L 136.891074 130.864944  L 139.72579 127.495171  L 142.560506 124.720547  L 145.395222 122.431968  L 148.229937 120.520329  L 151.064653 118.876527  L 156.734084 115.966081  L 162.403516 113.255996  L 166.655589 111.421769  L 170.907663 109.8296  L 175.159737 108.544342  L 177.994452 107.890034  L 180.829168 107.412741  L 185.081242 106.981112  L 189.333315 106.802821  L 196.420105 106.800264  L 203.506894 106.769421  L 207.758967 106.545201  L 212.011041 106.04171  L 214.845757 105.500186  L 217.680472 104.758471  L 220.515188 103.786138  L 223.349904 102.552758  L 226.18462 101.028796  L 229.019335 99.228924  L 233.271409 96.184642  L 241.775556 89.886246  L 244.610272 88.029876  L 247.444987 86.433813  L 250.279703 85.177351  L 253.114419 84.268724  L 255.949135 83.654693  L 258.78385 83.279995  L 263.035924 83.045807  L 268.705355 83.055424  L 274.374787 83.032455  L 280.044218 82.758682  L 288.548365 82.072318  L 298.46987 81.286855  L 305.55666 80.940099  L 314.060807 80.746204  L 323.982312 80.75289  L 332.486459 80.731869  L 338.15589 80.520514  L 342.407964 80.182508  L 346.660038 79.643054  L 350.912111 78.873192  L 355.164185 77.848704  L 359.416258 76.545373  L 363.668332 74.938987  L 367.920406 73.006413  L 372.172479 70.781671  L 379.259268 66.749256  L 384.9287 63.564898  L 389.180773 61.3955  L 393.432847 59.538967  L 397.684921 58.009724  L 401.936994 56.780523  L 406.189068 55.823952  L 410.441141 55.112602  L 414.693215 54.618921  L 420.362646 54.224956  L 437.370941 53.372412  L 441.623014 52.894857  L 445.875088 52.231791  L 450.127161 51.370788  L 454.379235 50.299423  L 458.631309 49.005269  L 462.883382 47.4759  L 467.135456 45.69889  L 471.387529 43.661814  L 475.639603 41.352246  L 479.891676 38.757759  L 484.14375 35.865928  L 484.14375 35.865928  " clip-path="url(#p8a1e241238)" style="fill: none; stroke: #1793d1; stroke-width: 2.5; stroke-linecap: square"/>
+   </ns2:g>
+   <ns2:g id="patch_3">
+    <ns2:path d="M 60.35375 288.456348  L 60.35375 23.837812  " style="fill: none; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </ns2:g>
+   <ns2:g id="patch_4">
+    <ns2:path d="M 484.14375 288.456348  L 484.14375 23.837812  " style="fill: none; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </ns2:g>
+   <ns2:g id="patch_5">
+    <ns2:path d="M 60.35375 288.456348  L 484.14375 288.456348  " style="fill: none; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </ns2:g>
+   <ns2:g id="patch_6">
+    <ns2:path d="M 60.35375 23.837812  L 484.14375 23.837812  " style="fill: none; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </ns2:g>
+   <ns2:g id="PathCollection_1">
+    <ns2:defs>
+     <ns2:path id="m5a3f7cbd60" d="M 0 3  C 0.795609 3 1.55874 2.683901 2.12132 2.12132  C 2.683901 1.55874 3 0.795609 3 0  C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132  C 1.55874 -2.683901 0.795609 -3 0 -3  C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132  C -2.683901 -1.55874 -3 -0.795609 -3 0  C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132  C -1.55874 2.683901 -0.795609 3 0 3  z " style="stroke: #1793d1"/>
+    </ns2:defs>
+    <ns2:g clip-path="url(#p8a1e241238)">
+     <ns2:use xlink:href="#m5a3f7cbd60" x="60.35375" y="276.428233" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="83.897639" y="243.376135" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="107.441528" y="200.176984" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="130.985417" y="140.273766" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="154.529306" y="117.072024" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="178.073194" y="107.874403" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="201.617083" y="106.806292" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="225.160972" y="101.614086" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="248.704861" y="85.829781" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="272.24875" y="83.070495" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="295.792639" y="81.468328" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="319.336528" y="80.726585" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="342.880417" y="80.13319" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="366.424306" y="73.724524" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="389.968194" y="61.025873" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="413.512083" y="54.735887" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="437.055972" y="53.400748" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="460.599861" y="48.327221" style="fill: #1793d1; stroke: #1793d1"/>
+     <ns2:use xlink:href="#m5a3f7cbd60" x="484.14375" y="35.865928" style="fill: #1793d1; stroke: #1793d1"/>
+    </ns2:g>
+   </ns2:g>
+   <ns2:g id="text_31">
+    <ns2:text style="fill: #ffffff; font: 14px 'Helvetica'; text-anchor: middle" x="272.24875" y="17.837812" transform="rotate(-0 272.24875 17.837812)">Total qp Downloads</ns2:text>
+   </ns2:g>
+  </ns2:g>
+ </ns2:g>
+ <ns3:defs xmlns:ns3="http://www.w3.org/2000/svg">
+  <ns3:clipPath id="p8a1e241238">
+   <ns3:rect x="60.35375" y="23.837812" width="423.79" height="264.618536"/>
+  </ns3:clipPath>
+ </ns3:defs>
+</g>
+  <g transform="translate(508.719131, 0)"><ns4:metadata xmlns:ns4="http://www.w3.org/2000/svg">
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-15T00:53:38.039203</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </ns4:metadata>
+ <ns5:defs xmlns:ns5="http://www.w3.org/2000/svg">
+  <ns5:style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</ns5:style>
+ </ns5:defs>
+ <ns6:g xmlns:ns6="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="figure_1">
+  <ns6:g id="patch_1">
+   <ns6:path d="M 0 356.620035  L 508.719131 356.620035  L 508.719131 0  L 0 0  z "/>
+  </ns6:g>
+  <ns6:g id="axes_1">
+   <ns6:g id="patch_2">
+    <ns6:path d="M 60.35375 288.456348  L 484.14375 288.456348  L 484.14375 23.837812  L 60.35375 23.837812  z "/>
+   </ns6:g>
+   <ns6:g id="matplotlib.axis_1">
+    <ns6:g id="xtick_1">
+     <ns6:g id="line2d_1">
+      <ns6:path d="M 60.35375 288.456348  L 60.35375 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_2">
+      <ns6:defs>
+       <ns6:path id="m690b0f25a6" d="M 0 0  L 0 3.5  " style="stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:defs>
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="60.35375" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_1">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(47.276694 329.030662) rotate(-45)">2-22-2025</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_2">
+     <ns6:g id="line2d_3">
+      <ns6:path d="M 82.658487 288.456348  L 82.658487 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_4">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="82.658487" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_2">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(69.581431 329.030662) rotate(-45)">3-24-2025</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_3">
+     <ns6:g id="line2d_5">
+      <ns6:path d="M 104.963224 288.456348  L 104.963224 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_6">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="104.963224" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_3">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(91.886168 329.030662) rotate(-45)">4-23-2025</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_4">
+     <ns6:g id="line2d_7">
+      <ns6:path d="M 127.267961 288.456348  L 127.267961 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_8">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="127.267961" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_4">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(114.190904 329.030662) rotate(-45)">5-23-2025</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_5">
+     <ns6:g id="line2d_9">
+      <ns6:path d="M 149.572697 288.456348  L 149.572697 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_10">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="149.572697" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_5">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(136.495641 329.030662) rotate(-45)">6-22-2025</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_6">
+     <ns6:g id="line2d_11">
+      <ns6:path d="M 171.877434 288.456348  L 171.877434 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_12">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="171.877434" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_6">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(158.800378 329.030662) rotate(-45)">7-22-2025</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_7">
+     <ns6:g id="line2d_13">
+      <ns6:path d="M 194.182171 288.456348  L 194.182171 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_14">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="194.182171" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_7">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(181.105115 329.030662) rotate(-45)">8-21-2025</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_8">
+     <ns6:g id="line2d_15">
+      <ns6:path d="M 216.486908 288.456348  L 216.486908 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_16">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="216.486908" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_8">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(203.409852 329.030662) rotate(-45)">9-20-2025</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_9">
+     <ns6:g id="line2d_17">
+      <ns6:path d="M 238.791645 288.456348  L 238.791645 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_18">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="238.791645" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_9">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(223.915002 332.629836) rotate(-45)">10-20-2025</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_10">
+     <ns6:g id="line2d_19">
+      <ns6:path d="M 261.096382 288.456348  L 261.096382 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_20">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="261.096382" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_10">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(246.219739 332.629836) rotate(-45)">11-19-2025</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_11">
+     <ns6:g id="line2d_21">
+      <ns6:path d="M 283.401118 288.456348  L 283.401118 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_22">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="283.401118" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_11">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(268.524476 332.629836) rotate(-45)">12-19-2025</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_12">
+     <ns6:g id="line2d_23">
+      <ns6:path d="M 305.705855 288.456348  L 305.705855 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_24">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="305.705855" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_12">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(292.628799 329.030662) rotate(-45)">1-18-2026</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_13">
+     <ns6:g id="line2d_25">
+      <ns6:path d="M 328.010592 288.456348  L 328.010592 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_26">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="328.010592" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_13">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(314.933536 329.030662) rotate(-45)">2-17-2026</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_14">
+     <ns6:g id="line2d_27">
+      <ns6:path d="M 350.315329 288.456348  L 350.315329 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_28">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="350.315329" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_14">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(337.238273 329.030662) rotate(-45)">3-19-2026</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_15">
+     <ns6:g id="line2d_29">
+      <ns6:path d="M 372.620066 288.456348  L 372.620066 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_30">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="372.620066" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_15">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(359.54301 329.030662) rotate(-45)">4-18-2026</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_16">
+     <ns6:g id="line2d_31">
+      <ns6:path d="M 394.924803 288.456348  L 394.924803 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_32">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="394.924803" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_16">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(381.847747 329.030662) rotate(-45)">5-18-2026</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_17">
+     <ns6:g id="line2d_33">
+      <ns6:path d="M 417.229539 288.456348  L 417.229539 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_34">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="417.229539" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_17">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(404.152483 329.030662) rotate(-45)">6-17-2026</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_18">
+     <ns6:g id="line2d_35">
+      <ns6:path d="M 439.534276 288.456348  L 439.534276 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_36">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="439.534276" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_18">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(426.45722 329.030662) rotate(-45)">7-17-2026</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_19">
+     <ns6:g id="line2d_37">
+      <ns6:path d="M 461.839013 288.456348  L 461.839013 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_38">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="461.839013" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_19">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(448.761957 329.030662) rotate(-45)">8-16-2026</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="xtick_20">
+     <ns6:g id="line2d_39">
+      <ns6:path d="M 484.14375 288.456348  L 484.14375 23.837812  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_40">
+      <ns6:g>
+       <ns6:use xlink:href="#m690b0f25a6" x="484.14375" y="288.456348" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_20">
+      <ns6:text style="fill: #ffffff; font: 8px 'Helvetica'" transform="translate(471.066694 329.030662) rotate(-45)">9-15-2026</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="text_21">
+     <ns6:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: middle" x="272.24875" y="346.92441" transform="rotate(-0 272.24875 346.92441)">Date</ns6:text>
+    </ns6:g>
+   </ns6:g>
+   <ns6:g id="matplotlib.axis_2">
+    <ns6:g id="ytick_1">
+     <ns6:g id="line2d_41">
+      <ns6:path d="M 60.35375 280.614799  L 484.14375 280.614799  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_42">
+      <ns6:defs>
+       <ns6:path id="m4e1959b4b2" d="M 0 0  L -3.5 0  " style="stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:defs>
+      <ns6:g>
+       <ns6:use xlink:href="#m4e1959b4b2" x="60.35375" y="280.614799" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_22">
+      <ns6:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="285.173862" transform="rotate(-0 53.35375 285.173862)">0</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="ytick_2">
+     <ns6:g id="line2d_43">
+      <ns6:path d="M 60.35375 253.0716  L 484.14375 253.0716  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_44">
+      <ns6:g>
+       <ns6:use xlink:href="#m4e1959b4b2" x="60.35375" y="253.0716" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_23">
+      <ns6:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="257.630662" transform="rotate(-0 53.35375 257.630662)">500</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="ytick_3">
+     <ns6:g id="line2d_45">
+      <ns6:path d="M 60.35375 225.5284  L 484.14375 225.5284  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_46">
+      <ns6:g>
+       <ns6:use xlink:href="#m4e1959b4b2" x="60.35375" y="225.5284" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_24">
+      <ns6:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="230.087463" transform="rotate(-0 53.35375 230.087463)">1000</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="ytick_4">
+     <ns6:g id="line2d_47">
+      <ns6:path d="M 60.35375 197.985201  L 484.14375 197.985201  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_48">
+      <ns6:g>
+       <ns6:use xlink:href="#m4e1959b4b2" x="60.35375" y="197.985201" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_25">
+      <ns6:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="202.544263" transform="rotate(-0 53.35375 202.544263)">1500</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="ytick_5">
+     <ns6:g id="line2d_49">
+      <ns6:path d="M 60.35375 170.442001  L 484.14375 170.442001  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_50">
+      <ns6:g>
+       <ns6:use xlink:href="#m4e1959b4b2" x="60.35375" y="170.442001" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_26">
+      <ns6:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="175.001063" transform="rotate(-0 53.35375 175.001063)">2000</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="ytick_6">
+     <ns6:g id="line2d_51">
+      <ns6:path d="M 60.35375 142.898801  L 484.14375 142.898801  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_52">
+      <ns6:g>
+       <ns6:use xlink:href="#m4e1959b4b2" x="60.35375" y="142.898801" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_27">
+      <ns6:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="147.457864" transform="rotate(-0 53.35375 147.457864)">2500</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="ytick_7">
+     <ns6:g id="line2d_53">
+      <ns6:path d="M 60.35375 115.355602  L 484.14375 115.355602  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_54">
+      <ns6:g>
+       <ns6:use xlink:href="#m4e1959b4b2" x="60.35375" y="115.355602" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_28">
+      <ns6:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="119.914664" transform="rotate(-0 53.35375 119.914664)">3000</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="ytick_8">
+     <ns6:g id="line2d_55">
+      <ns6:path d="M 60.35375 87.812402  L 484.14375 87.812402  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_56">
+      <ns6:g>
+       <ns6:use xlink:href="#m4e1959b4b2" x="60.35375" y="87.812402" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_29">
+      <ns6:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="92.371465" transform="rotate(-0 53.35375 92.371465)">3500</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="ytick_9">
+     <ns6:g id="line2d_57">
+      <ns6:path d="M 60.35375 60.269203  L 484.14375 60.269203  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_58">
+      <ns6:g>
+       <ns6:use xlink:href="#m4e1959b4b2" x="60.35375" y="60.269203" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_30">
+      <ns6:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="64.828265" transform="rotate(-0 53.35375 64.828265)">4000</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="ytick_10">
+     <ns6:g id="line2d_59">
+      <ns6:path d="M 60.35375 32.726003  L 484.14375 32.726003  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #ffffff; stroke-opacity: 0.2; stroke-width: 0.5; stroke-linecap: square"/>
+     </ns6:g>
+     <ns6:g id="line2d_60">
+      <ns6:g>
+       <ns6:use xlink:href="#m4e1959b4b2" x="60.35375" y="32.726003" style="fill: #ffffff; stroke: #ffffff; stroke-width: 0.8"/>
+      </ns6:g>
+     </ns6:g>
+     <ns6:g id="text_31">
+      <ns6:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: end" x="53.35375" y="37.285066" transform="rotate(-0 53.35375 37.285066)">4500</ns6:text>
+     </ns6:g>
+    </ns6:g>
+    <ns6:g id="text_32">
+     <ns6:text style="fill: #ffffff; font: 12px 'Helvetica'; text-anchor: middle" x="16.318125" y="156.14708" transform="rotate(-90 16.318125 156.14708)">Clones</ns6:text>
+    </ns6:g>
+   </ns6:g>
+   <ns6:g id="line2d_61">
+    <ns6:path d="M 60.35375 276.428233  L 63.188466 275.143273  L 66.023181 273.608639  L 68.857897 271.835811  L 71.692613 269.836267  L 74.527329 267.621485  L 77.362044 265.202945  L 81.614118 261.218198  L 85.866191 256.839563  L 90.118265 252.10578  L 94.370339 247.055591  L 100.03977 239.896776  L 105.709202 232.336135  L 111.378633 224.447872  L 118.465422 214.166257  L 125.552212 203.450261  L 142.560506 177.224013  L 146.812579 171.245539  L 149.647295 167.538338  L 152.482011 164.094204  L 155.316727 160.912641  L 158.151442 157.985364  L 160.986158 155.304085  L 163.820874 152.860515  L 166.655589 150.646367  L 169.490305 148.653354  L 172.325021 146.873183  L 175.159737 145.295935  L 177.994452 143.907592  L 180.829168 142.693505  L 185.081242 141.167059  L 189.333315 139.950286  L 193.585389 138.993744  L 199.25482 138.021616  L 210.593683 136.236286  L 214.845757 135.296662  L 219.09783 134.050426  L 223.349904 132.483294  L 227.601977 130.64474  L 231.854051 128.585741  L 237.523482 125.585605  L 253.114419 117.032379  L 257.366492 115.033162  L 261.618566 113.351382  L 265.87064 112.035835  L 270.122713 111.014149  L 275.792145 109.947827  L 289.965723 107.483193  L 299.887228 105.708483  L 305.55666 104.959706  L 309.808733 104.609281  L 315.478165 104.358294  L 331.069101 103.83578  L 336.738533 103.365188  L 342.407964 102.70333  L 348.077395 101.857103  L 355.164185 100.567592  L 365.08569 98.762683  L 369.337763 98.188002  L 373.589837 97.835623  L 382.093984 97.371587  L 384.9287 96.960742  L 387.763416 96.26491  L 390.598131 95.189949  L 392.015489 94.480875  L 393.432847 93.641716  L 394.850205 92.660704  L 397.684921 90.260119  L 400.519636 87.366539  L 403.354352 84.107282  L 407.606426 78.811258  L 413.275857 71.658318  L 416.110573 68.329066  L 418.945288 65.328253  L 421.780004 62.687217  L 424.61472 60.369083  L 427.449436 58.335277  L 430.284151 56.547223  L 433.118867 54.966344  L 437.370941 52.8991  L 441.623014 51.082854  L 447.292446 48.913643  L 454.379235 46.479606  L 474.222245 39.901077  L 479.891676 37.705715  L 484.14375 35.865928  L 484.14375 35.865928  " clip-path="url(#pf20e349d24)" style="fill: none; stroke: #2ea44f; stroke-width: 2.5; stroke-linecap: square"/>
+   </ns6:g>
+   <ns6:g id="patch_3">
+    <ns6:path d="M 60.35375 288.456348  L 60.35375 23.837812  " style="fill: none; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </ns6:g>
+   <ns6:g id="patch_4">
+    <ns6:path d="M 484.14375 288.456348  L 484.14375 23.837812  " style="fill: none; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </ns6:g>
+   <ns6:g id="patch_5">
+    <ns6:path d="M 60.35375 288.456348  L 484.14375 288.456348  " style="fill: none; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </ns6:g>
+   <ns6:g id="patch_6">
+    <ns6:path d="M 60.35375 23.837812  L 484.14375 23.837812  " style="fill: none; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </ns6:g>
+   <ns6:g id="PathCollection_1">
+    <ns6:defs>
+     <ns6:path id="mfcc59c5e54" d="M 0 3  C 0.795609 3 1.55874 2.683901 2.12132 2.12132  C 2.683901 1.55874 3 0.795609 3 0  C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132  C 1.55874 -2.683901 0.795609 -3 0 -3  C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132  C -2.683901 -1.55874 -3 -0.795609 -3 0  C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132  C -1.55874 2.683901 -0.795609 3 0 3  z " style="stroke: #2ea44f"/>
+    </ns6:defs>
+    <ns6:g clip-path="url(#pf20e349d24)">
+     <ns6:use xlink:href="#mfcc59c5e54" x="60.35375" y="276.428233" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="82.658487" y="260.177745" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="104.963224" y="233.350669" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="127.267961" y="200.794607" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="149.572697" y="167.632595" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="171.877434" y="147.140454" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="194.182171" y="138.877494" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="216.486908" y="134.856187" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="238.791645" y="124.885549" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="261.096382" y="113.537751" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="283.401118" y="108.690147" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="305.705855" y="104.944272" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="328.010592" y="104.007804" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="350.315329" y="101.473829" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="372.620066" y="97.893213" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="394.924803" y="92.604919" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="417.229539" y="67.099916" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="439.534276" y="51.951156" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="461.839013" y="44.073801" style="fill: #2ea44f; stroke: #2ea44f"/>
+     <ns6:use xlink:href="#mfcc59c5e54" x="484.14375" y="35.865928" style="fill: #2ea44f; stroke: #2ea44f"/>
+    </ns6:g>
+   </ns6:g>
+   <ns6:g id="text_33">
+    <ns6:text style="fill: #ffffff; font: 14px 'Helvetica'; text-anchor: middle" x="272.24875" y="17.837812" transform="rotate(-0 272.24875 17.837812)">Total qp Clones</ns6:text>
+   </ns6:g>
+  </ns6:g>
+ </ns6:g>
+ <ns7:defs xmlns:ns7="http://www.w3.org/2000/svg">
+  <ns7:clipPath id="pf20e349d24">
+   <ns7:rect x="60.35375" y="23.837812" width="423.79" height="264.618536"/>
+  </ns7:clipPath>
+ </ns7:defs>
+</g>
+</svg>
